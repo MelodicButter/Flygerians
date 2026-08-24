@@ -1,0 +1,377 @@
+{
+  "source": "TF_Menu_A3_JUNE26_Mobo.pdf (page 1 + page 2, page 2 provided via user paste)",
+  "allergenKey": {
+    "G": "Gluten",
+    "D": "Dairy",
+    "E": "Egg",
+    "N": "Nuts",
+    "M": "Molluscs / Shellfish",
+    "CR": "Crustaceans",
+    "F": "Fish",
+    "V": "Vegetarian",
+    "VG": "Vegan"
+  },
+  "allergyDisclaimer": "Please inform a member of staff of any allergies or dietary requirements before ordering. While we take every care, we cannot guarantee the absence of allergens. A discretionary 10% service charge will be automatically added to your bill.",
+  "categories": [
+    {
+      "name": "Small Chops",
+      "items": [
+        {
+          "name": "Pepper Prawns",
+          "description": "NEW sweet summer pepper prawns and cube dipping agege bread.",
+          "tag": "£12.50",
+          "allergens": []
+        },
+        {
+          "name": "Giz-dodo",
+          "description": "Sweet pepper chicken gizzard served with plantain.",
+          "tag": "£8",
+          "allergens": []
+        },
+        {
+          "name": "Sweet Agege Bread",
+          "description": "Naija sweet toasted bread chunks served with homemade garlic butter.",
+          "tag": "£2.50 | Sharer size: £4.50",
+          "allergens": [
+            "G",
+            "D"
+          ]
+        },
+        {
+          "name": "Fly Wings",
+          "description": "Sweet 'n' sticky wings drenched in Mama's Forbidden Sauce.",
+          "tag": "Small (5 pieces): £5 | Medium (8 pieces): £7.50 | Sharer (12 pieces): £9.50",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": "Supa Dupa Hot Wings",
+          "description": "Lightly battered wings tossed in hot pepper sauce.",
+          "tag": "Small (5 pieces): £5 | Medium (8 pieces): £7.50 | Sharer (12 pieces): £9.50",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": "Naughty Pot of Cassava",
+          "description": "Cassava chips served with crayfish ketchup dip. (Vegan option available without crayfish ketchup)",
+          "tag": "£8",
+          "allergens": [
+            "M"
+          ],
+          "note": "VG"
+        },
+        {
+          "name": "Salt & Pepper Squid Bits",
+          "description": "Crispy squid bites served Flygerian style.",
+          "tag": "£8.50",
+          "allergens": [
+            "M",
+            "G"
+          ]
+        },
+        {
+          "name": "Agege Suya Sandwich",
+          "description": "Toasted Agege bread with homemade garlic butter, beef or chicken suya, red onion, tomato and lettuce. Choose between Mama's Forbidden Sweet Sauce or Supa Dupa Hot Sauce.",
+          "tag": "£14.50",
+          "allergens": [
+            "G",
+            "D",
+            "N"
+          ]
+        },
+        {
+          "name": "Patties",
+          "description": "All options are served with supa dupa hot sauce pot. Choose from Chicken, Beef or Veg.",
+          "tag": "£4.50",
+          "allergens": [
+            "G"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Big Chops",
+      "items": [
+        {
+          "name": "2 Fly Chicks",
+          "description": "2 pieces of chicken marinated in Mama's forbidden sauce, served with jollof & plantain.",
+          "tag": "£19",
+          "allergens": [
+            "G"
+          ]
+        },
+        {
+          "name": "Naija Fish & Chips",
+          "description": "Lightly battered red bream, served with cassava chips, hot sauce and Mama's forbidden sauce.",
+          "tag": "£18",
+          "allergens": [
+            "F"
+          ]
+        },
+        {
+          "name": "Efo Riro Bang Bang Basmati",
+          "description": "Basmati rice slow cooked with efo riro (spinach stew).",
+          "tag": "£16",
+          "allergens": [],
+          "note": "V, VG"
+        },
+        {
+          "name": "Banging Black Eye Bean Stew",
+          "description": "Soft ripe plantain, served with our slow and cooked black eye bean stew. Add 2 slices of bread and vegan garlic butter for £2.50.",
+          "tag": "£14.50",
+          "allergens": [],
+          "note": "V, VG"
+        },
+        {
+          "name": "Ayamase & Basmati Rice",
+          "description": "Traditional green pepper stew and white rice. Slow cooked to perfection with beef, shaki and cowfoot. Served with plantain.",
+          "tag": "£19",
+          "allergens": [
+            "CR"
+          ]
+        },
+        {
+          "name": "Assorted Meat Stew & Basmati",
+          "description": "Basmati fluffy white rice and plantain, served with beef, shaki and chicken cooked in our grandma's famous red stew.",
+          "tag": "£19",
+          "allergens": []
+        },
+        {
+          "name": "Beef or Chicken Suya",
+          "description": "Diced beef or chicken steak coated in our banging suya spice and served with tomato and red onion garnish.",
+          "tag": "£15.50",
+          "allergens": [
+            "N"
+          ]
+        },
+        {
+          "name": "Jollof Box",
+          "description": "Basmati rice slow cooked in rich red pepper stew, served with plantain and hot sauce.",
+          "tag": "£9.50",
+          "allergens": [],
+          "note": "V, VG"
+        },
+        {
+          "name": "Fully Loaded Fries",
+          "description": "French Fries loaded with our take time sauce and beef Suya.",
+          "tag": "£15",
+          "allergens": [
+            "N"
+          ]
+        }
+      ],
+      "addons": [
+        {
+          "name": "Efo Riro (Spinach Stew)",
+          "tag": "£5.50",
+          "allergens": [],
+          "note": "V"
+        },
+        {
+          "name": "Beef Suya",
+          "tag": "£7.50",
+          "allergens": [
+            "N"
+          ]
+        },
+        {
+          "name": "Squid",
+          "tag": "£8",
+          "allergens": [
+            "M"
+          ]
+        },
+        {
+          "name": "Fried Fish",
+          "tag": "£7",
+          "allergens": [
+            "F"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "From the Grill - Summer Specials",
+      "items": [
+        {
+          "name": "Flyer Than Fly Mountain Burger",
+          "description": "Our signature mountain burger taking things to first-class altitude. A juicy plant-based mountain burger stacked with sweet plantain, crisp lettuce, crispy onions and creamy vegan mayo, all tucked inside a soft vegan butter bun. Pure Flygerian flavour, no turbulence. Add suya spice (contains nuts).",
+          "tag": "£13.50",
+          "allergens": [],
+          "note": "VG"
+        },
+        {
+          "name": "Oga on Top Burger",
+          "description": "When one patty isn't enough, Oga goes on top. Two seasoned beef patties layered with melted cheese, sweet plantain, fresh onions and crisp lettuce, served in a toasted brioche bun brushed with our homemade garlic butter. Finished with our signature sweet and hot sauce on the side for dipping, drizzling or doing the most.",
+          "tag": "£13.50",
+          "allergens": []
+        },
+        {
+          "name": "Flygerian Crispy Chicken Burger",
+          "description": "A crispy chicken thigh fillet, coated in seasoned cornflour and fried until golden perfection. Served in a buttery brioche bun with fresh lettuce, crispy onions, homemade garlic butter and our house burger sauce. Comes with sweet and hot sauce on the side for that signature Flygerian kick. Add cheese for £1.",
+          "tag": "£13.50",
+          "allergens": []
+        },
+        {
+          "name": "Keep It Simple Cheese Burger",
+          "description": "2 beef patties with a slice of cheese and crispy onions.",
+          "tag": "£9.50",
+          "allergens": []
+        },
+        {
+          "name": "Jerk & Jollof",
+          "description": "Juicy jerk chicken legs and thighs marinated in bold Caribbean spices and flame-grilled to BBQ perfection. Served with smoky jollof rice and plantain.",
+          "tag": "£19",
+          "allergens": []
+        }
+      ]
+    },
+    {
+      "name": "Summer Sides",
+      "items": [
+        {
+          "name": "Vegan Slaw",
+          "description": "",
+          "tag": "£5",
+          "allergens": [],
+          "note": "VG"
+        },
+        {
+          "name": "Plantain Portion",
+          "description": "",
+          "tag": "£5",
+          "allergens": [],
+          "note": "V, VG"
+        },
+        {
+          "name": "Plain Rice & Plantain",
+          "description": "",
+          "tag": "£5",
+          "allergens": [],
+          "note": "V, VG"
+        },
+        {
+          "name": "Fries",
+          "description": "",
+          "tag": "£5",
+          "allergens": [],
+          "note": "V, VG"
+        },
+        {
+          "name": "Mac & Cheese",
+          "description": "",
+          "tag": "£8",
+          "allergens": [
+            "G",
+            "D"
+          ]
+        },
+        {
+          "name": "BBQ Corn on the Cob",
+          "description": "Charred corn smothered in homemade garlic, parsley and Himalayan salt butter. Simple. Smoky. Elite.",
+          "tag": "£5",
+          "allergens": [
+            "D"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Desserts",
+      "items": [
+        {
+          "name": "Chin'offe Pie",
+          "description": "Flygerian chin chin pie layered with banana and caramel, topped with whipped cream and sprinkled with Milo.",
+          "tag": "£6",
+          "allergens": [
+            "G",
+            "D"
+          ]
+        },
+        {
+          "name": "Plantain Ice Cream",
+          "description": "Homemade vanilla plantain ice cream.",
+          "tag": "£5.50",
+          "allergens": [
+            "D"
+          ]
+        },
+        {
+          "name": "Chin Chin Crumble",
+          "description": "Flygerian chin chin crumble served with sweet creamy custard. Our twist on a British classic dessert.",
+          "tag": "£6.50",
+          "allergens": [
+            "G",
+            "D"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kids Menu",
+      "items": [
+        {
+          "name": "Kids Menu",
+          "description": "Choose 1: Chicken Wing, Fish Fingers, Chicken Nuggets or Vegan Nuggets. Choose 1 side: Jollof, Chips, White Rice, Salad or Plantain.",
+          "tag": "£5.50",
+          "allergens": []
+        }
+      ]
+    }
+  ],
+  "sundayOnly": {
+    "name": "Sunday Roasts",
+    "note": "Served on Sundays only. All roasts come with chilli twice-cooked roast potatoes, Yorkshire pudding, honey roast parsnips and carrots, plantain, greens and gravy.",
+    "items": [
+      {
+        "name": "Rosemary & Mint Lamb Chops",
+        "description": "Tender lamb chops marinated in rosemary and mint.",
+        "tag": "£22",
+        "allergens": []
+      },
+      {
+        "name": "Roasted Whole Tilapia with Sauteed Veg",
+        "description": "Whole tilapia served with sauteed seasonal vegetables.",
+        "tag": "£24",
+        "allergens": [
+          "F"
+        ]
+      },
+      {
+        "name": "Half Chicken",
+        "description": "Slow-roasted half chicken with juicy meat and crispy skin.",
+        "tag": "£22",
+        "allergens": []
+      },
+      {
+        "name": "Vegan Wellington with Plantain Puree",
+        "description": "Plant-based Wellington in flaky pastry, served with sweet plantain puree.",
+        "tag": "£22",
+        "allergens": [
+          "G"
+        ]
+      }
+    ]
+  },
+  "extras": [
+    {
+      "name": "Jollof Rice",
+      "tag": "£5",
+      "allergens": []
+    },
+    {
+      "name": "Extra Plantain",
+      "tag": "£4.50",
+      "allergens": []
+    },
+    {
+      "name": "Cauliflower Cheese",
+      "tag": "£5",
+      "allergens": [
+        "D"
+      ]
+    }
+  ]
+}

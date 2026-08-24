@@ -1,0 +1,20 @@
+{
+  "cookbook": {
+    "title": "The Flygerians Cookbook",
+    "description": "Our recipes, our stories, our flavour — now in a book you can cook from at home.",
+    "amazonUrl": "https://www.amazon.co.uk/",
+    "buttonText": "Buy on Amazon"
+  },
+  "merch": {
+    "title": "Flygerians Merch",
+    "description": "Tees, caps and more, dropping soon. Pop your email in and we'll let you know the moment it lands.",
+    "status": "coming_soon",
+    "shopUrl": "",
+    "badgeText": "Coming Soon"
+  },
+  "social": [
+    { "label": "Instagram", "url": "https://instagram.com/theflygerians" },
+    { "label": "TikTok", "url": "https://tiktok.com/@theflygerians" },
+    { "label": "Facebook", "url": "https://facebook.com/theflygerians" }
+  ]
+}

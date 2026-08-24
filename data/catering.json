@@ -1,0 +1,32 @@
+{
+  "info": [
+    { "title": "Who It's For", "text": "Offices, birthdays, weddings, wakes, engagement parties and any gathering that deserves proper food." },
+    { "title": "Where We Deliver", "text": "Across London, with collection also available from Peckham Palms." },
+    { "title": "Lead Time", "text": "We ask for at least 5 days' notice for platters and 14 days for large events of 50+ guests." },
+    { "title": "Minimum Order", "text": "Platters serve 8–10 people, with a minimum order of 2 platters per booking." }
+  ],
+  "categories": [
+    {
+      "name": "Small Eats Platter",
+      "items": [
+        { "name": "Naija Bites Board", "description": "Chicken gizzard, sticky wings, cassava chips and fried plantain, served on a sharing board.", "tag": "Serves 8–10 · From £75" },
+        { "name": "Hot Wings Platter", "description": "A generous tray of our lightly battered hot wings with dipping sauces on the side.", "tag": "Serves 8–10 · From £65" }
+      ]
+    },
+    {
+      "name": "Big Eats Platter",
+      "items": [
+        { "name": "Jollof & Chicken Sharing Tray", "description": "Smoky jollof rice, forbidden sauce chicken and fried plantain, ready to serve straight from the tray.", "tag": "Serves 10–12 · From £120" },
+        { "name": "Suya & Rice Feast", "description": "A mix of chicken and beef suya with basmati or jollof rice, spinach stew and plantain.", "tag": "Serves 10–12 · From £140" }
+      ]
+    },
+    {
+      "name": "Dolci Platter",
+      "items": [
+        { "name": "Chin Chin Pie Bites", "description": "Bite-sized portions of our chin chin, banana and caramel pie, topped with Milo.", "tag": "Serves 10–12 · From £55" },
+        { "name": "Plantain Ice Cream Tubs", "description": "Individual tubs of our homemade vanilla plantain ice cream.", "tag": "10 tubs · From £40" }
+      ]
+    }
+  ],
+  "note": "Prices are a guide and vary by guest count and menu selection. Get in touch below for a full quote tailored to your event."
+}

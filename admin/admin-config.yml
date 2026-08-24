@@ -1,0 +1,131 @@
+# Place this file at /admin/config.yml in your repo.
+# This is what turns /admin into a friendly editing dashboard for your sisters.
+
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME   # e.g. jess-flygerians/flygerians-website
+  branch: main
+  base_url: https://flygerians-cms-auth.YOUR-WORKER-SUBDOMAIN.workers.dev
+  auth_endpoint: auth
+
+# Where media (photos sisters upload) get stored and how they're linked in content
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Optional but recommended: shows a live-ish preview and disables the raw editor
+publish_mode: simple
+
+collections:
+
+  - name: "site"
+    label: "Site Settings"
+    files:
+      - file: "data/site.json"
+        label: "General Settings"
+        name: "site"
+        fields:
+          - { label: "Hero Eyebrow Text", name: "hero.eyebrow", widget: "string" }
+          - { label: "Hero Title", name: "hero.title", widget: "string" }
+          - { label: "Hero Subtext", name: "hero.text", widget: "text" }
+          - { label: "Address", name: "address", widget: "string" }
+          - { label: "Google Maps Link", name: "mapsUrl", widget: "string" }
+          - { label: "Phone (optional)", name: "phone", widget: "string", required: false }
+          - { label: "Contact Email", name: "email", widget: "string" }
+          - label: "Opening Hours"
+            name: "hours"
+            widget: "list"
+            fields:
+              - { label: "Day", name: "day", widget: "string" }
+              - { label: "Time (or 'Closed')", name: "time", widget: "string" }
+          - label: "Social Links"
+            name: "social"
+            widget: "list"
+            fields:
+              - { label: "Platform Name", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+
+  - name: "menu"
+    label: "Menu"
+    files:
+      - file: "data/menu.json"
+        label: "Food Menu"
+        name: "menu"
+        fields:
+          - label: "Menu Categories"
+            name: "categories"
+            widget: "list"
+            fields:
+              - { label: "Category Name", name: "name", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Dish Name", name: "name", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Price / Tag (optional)", name: "tag", widget: "string", required: false }
+              - label: "Add-Ons (optional, Big Eats only)"
+                name: "addons"
+                widget: "list"
+                required: false
+                field: { label: "Add-On", name: "addon", widget: "string" }
+
+  - name: "catering"
+    label: "Catering"
+    files:
+      - file: "data/catering.json"
+        label: "Catering Packages"
+        name: "catering"
+        fields:
+          - label: "Info Boxes"
+            name: "info"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Package Categories"
+            name: "categories"
+            widget: "list"
+            fields:
+              - { label: "Category Name", name: "name", widget: "string" }
+              - label: "Packages"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Package Name", name: "name", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Serves / Price Tag", name: "tag", widget: "string" }
+          - { label: "Pricing Note", name: "note", widget: "text" }
+
+  - name: "links"
+    label: "Links Page"
+    files:
+      - file: "data/links.json"
+        label: "Cookbook, Merch & Social"
+        name: "links"
+        fields:
+          - label: "Cookbook"
+            name: "cookbook"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Amazon Link", name: "amazonUrl", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+          - label: "Merchandise"
+            name: "merch"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Status"
+                name: "status"
+                widget: "select"
+                options: ["coming_soon", "live"]
+              - { label: "Shop Link (once live)", name: "shopUrl", widget: "string", required: false }
+              - { label: "Badge Text", name: "badgeText", widget: "string" }
+          - label: "Social Links"
+            name: "social"
+            widget: "list"
+            fields:
+              - { label: "Platform Name", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }

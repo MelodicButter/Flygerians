@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catering | The Flygerians</title>
+<meta name="description" content="Nigerian sharing platters and catering packages from The Flygerians, delivered across London for offices, parties and celebrations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Merriweather:wght@900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">The <span>Flygerians</span></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="about.html">Our Story</a>
+      <a href="menu.html">Menu</a>
+      <a href="catering.html" class="active">Catering</a>
+      <a href="visit.html">Visit Us</a>
+      <a href="links.html">Links</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Events &amp; Parties</p>
+    <h1>Naija flavour, delivered to your event</h1>
+    <p class="hero-text">From office lunches to birthdays and celebrations, our sharing platters bring the same bold flavour from Peckham Palms straight to you.</p>
+  </div>
+</section>
+
+<section class="catering-info">
+  <div class="container catering-info-grid" id="cateringInfo">
+    <div class="info-item"><h3>Who It's For</h3><p>Offices, birthdays, weddings, wakes, engagement parties and any gathering that deserves proper food.</p></div>
+    <div class="info-item"><h3>Where We Deliver</h3><p>Across London, with collection also available from Peckham Palms.</p></div>
+    <div class="info-item"><h3>Lead Time</h3><p>We ask for at least 5 days' notice for platters and 14 days for large events of 50+ guests.</p></div>
+    <div class="info-item"><h3>Minimum Order</h3><p>Platters serve 8&ndash;10 people, with a minimum order of 2 platters per booking.</p></div>
+  </div>
+</section>
+
+<section class="menu">
+  <div class="container">
+    <p class="section-label center">Catering Packages</p>
+    <h2 class="center">Sharing platters for every occasion</h2>
+
+    <div id="cateringPackages">
+      <!-- Rendered from data/catering.json by render.js -->
+    </div>
+
+    <p class="menu-note" id="cateringNote">Prices are a guide and vary by guest count and menu selection. Get in touch below for a full quote tailored to your event.</p>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container contact-grid">
+    <div class="contact-text">
+      <p class="section-label">Get A Quote</p>
+      <h2>Tell us about your event</h2>
+      <p>Share your date, guest count and what you're after, and our team will get back to you with a tailored catering quote.</p>
+    </div>
+    <form class="contact-form" id="cateringForm">
+      <label for="cname">Name</label>
+      <input type="text" id="cname" name="name" required>
+
+      <label for="cemail">Email</label>
+      <input type="email" id="cemail" name="email" required>
+
+      <label for="cdate">Event Date</label>
+      <input type="date" id="cdate" name="date">
+
+      <label for="cguests">Guest Count</label>
+      <input type="number" id="cguests" name="guests" min="1">
+
+      <label for="cmessage">Tell us more</label>
+      <textarea id="cmessage" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="btn btn-primary">Request a Quote</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="logo">The <span>Flygerians</span></p>
+    <nav class="footer-nav">
+      <a href="about.html">Our Story</a>
+      <a href="menu.html">Menu</a>
+      <a href="catering.html">Catering</a>
+      <a href="visit.html">Visit Us</a>
+      <a href="links.html">Links</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="copyright">&copy; 2026 The Flygerians &mdash; All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="render.js" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>
