@@ -59,8 +59,8 @@
           "tag": "£8",
           "allergens": [
             "M"
-          ],
-          "note": "VG"
+          ]
+          
         },
         {
           "name": "Salt & Pepper Squid Bits",
@@ -192,15 +192,16 @@
         }
       ]
     },
+    
     {
       "name": "From the Grill - Summer Specials",
       "items": [
         {
           "name": "Flyer Than Fly Mountain Burger",
-          "description": "Our signature mountain burger taking things to first-class altitude. A juicy plant-based mountain burger stacked with sweet plantain, crisp lettuce, crispy onions and creamy vegan mayo, all tucked inside a soft vegan butter bun. Pure Flygerian flavour, no turbulence. Add suya spice (contains nuts).",
+          "description": "Our signature mountain burger taking things to first-class altitude. A juicy plant-based mountain burger stacked with sweet plantain, crisp lettuce, crispy onions and creamy vegan mayo, all tucked inside a soft vegan butter bun. Pure Flygerian flavour, no turbulence. Add suya spice.",
           "tag": "£13.50",
           "allergens": [],
-          "note": "VG"
+          "note": "VG, N"
         },
         {
           "name": "Oga on Top Burger",
@@ -314,7 +315,7 @@
       "items": [
         {
           "name": "Kids Menu",
-          "description": "Choose 1: Chicken Wing, Fish Fingers, Chicken Nuggets or Vegan Nuggets. Choose 1 side: Jollof, Chips, White Rice, Salad or Plantain.",
+          "description": "Choose 1: Chicken Wing, Fish Fingers, Chicken Nuggets or Vegan Nuggets. \nChoose 1 side: Jollof, Chips, White Rice, Salad or Plantain.",
           "tag": "£5.50",
           "allergens": []
         }

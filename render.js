@@ -16,25 +16,110 @@ function esc(str) {
   return div.innerHTML;
 }
 
+function allergenHTML(allergens, note) {
+  const parts = [];
+  if (Array.isArray(allergens) && allergens.length) {
+    parts.push(`<span class="allergen-list">Allergens: ${esc(allergens.join(', '))}</span>`);
+  }
+  if (note) {
+    parts.push(`<span class="allergen-note">${esc(note)}</span>`);
+  }
+  if (!parts.length) return '';
+  return `<div class="allergens">${parts.join(' ')}</div>`;
+}
+
 function menuItemHTML(item) {
   return `
     <div class="menu-item">
       <h4>${esc(item.name)}</h4>
       <p>${esc(item.description)}</p>
       ${item.tag ? `<span class="tag">${esc(item.tag)}</span>` : ''}
+      ${allergenHTML(item.allergens, item.note)}
     </div>`;
 }
 
+function addonHTML(addon) {
+  if (typeof addon === 'string') {
+    return `<li>${esc(addon)}</li>`;
+  }
+  const bits = [esc(addon.name)];
+  if (addon.tag) bits.push(`<span class="tag">${esc(addon.tag)}</span>`);
+  const allergenBit = allergenHTML(addon.allergens, addon.note);
+  return `<li>${bits.join(' - ')}${allergenBit}</li>`;
+}
+
+function pricingTiersHTML(tiers) {
+  if (!Array.isArray(tiers) || !tiers.length) return '';
+  const cols = tiers.map(t => `
+    <div class="pricing-tier">
+      <div class="pricing-tier-title">${esc(t.title)}</div>
+      <div class="pricing-tier-detail">${esc(t.detail)}</div>
+    </div>`).join('');
+  return `<div class="pricing-tiers">${cols}</div>`;
+}
+
+function infoColumnHTML(col) {
+  const heading = col.heading ? `<h4>${esc(col.heading)}</h4>` : '';
+  const paras = (col.paragraphs || []).map(p => `<p>${esc(p)}</p>`).join('');
+  return `<div class="info-page-column">${heading}${paras}</div>`;
+}
+
+function infoPageHTML(infoPage) {
+  if (!infoPage || !Array.isArray(infoPage.columns)) return '';
+  return `<div class="info-page">${infoPage.columns.map(infoColumnHTML).join('')}</div>`;
+}
+
+function plainListHTML(items) {
+  if (!Array.isArray(items) || !items.length) return '';
+  return `<ul class="plain-list">${items.map(i => `<li>${esc(i)}</li>`).join('')}</ul>`;
+}
+
+function groupHTML(group) {
+  const heading = group.heading ? `<h4>${esc(group.heading)}</h4>` : '';
+  const note = group.note ? `<p class="group-note">${esc(group.note)}</p>` : '';
+  return `<div class="menu-group">${heading}${note}${plainListHTML(group.items)}</div>`;
+}
+
 function categoryHTML(cat) {
+  const subtitle = cat.subtitle ? `<p class="category-subtitle">${esc(cat.subtitle)}</p>` : '';
+  const infoPage = infoPageHTML(cat.infoPage);
   const items = (cat.items || []).map(menuItemHTML).join('');
-  const addons = (cat.addons && cat.addons.length)
-    ? `<div class="addons"><h4>Add Ons</h4><ul>${cat.addons.map(a => `<li>${esc(a)}</li>`).join('')}</ul></div>`
+  const listItems = plainListHTML(cat.listItems);
+  const groups = (cat.groups && cat.groups.length)
+    ? `<div class="menu-groups">${cat.groups.map(groupHTML).join('')}</div>`
     : '';
+  const addonSingle = cat.addon ? `<p class="category-addon">${esc(cat.addon)}</p>` : '';
+  const addons = (cat.addons && cat.addons.length)
+    ? `<div class="addons"><h4>Add Ons</h4><ul>${cat.addons.map(addonHTML).join('')}</ul></div>`
+    : '';
+  const note = cat.note ? `<p class="category-note">${esc(cat.note)}</p>` : '';
+  const tiers = pricingTiersHTML(cat.pricingTiers);
   return `
     <div class="menu-block">
       <h3 class="menu-heading">${esc(cat.name)}</h3>
+      ${infoPage}
+      ${subtitle}
       <div class="menu-grid">${items}</div>
+      ${listItems}
+      ${groups}
+      ${note}
+      ${addonSingle}
       ${addons}
+      ${tiers}
+    </div>`;
+}
+
+function allergenKeyHTML(allergenKey, disclaimer) {
+  if (!allergenKey) return '';
+  const rows = Object.entries(allergenKey)
+    .map(([code, label]) => `<li><strong>${esc(code)}</strong> - ${esc(label)}</li>`)
+    .join('');
+  const disclaimerHTML = disclaimer ? `<p class="allergy-disclaimer">${esc(disclaimer)}</p>` : '';
+  return `
+    <div class="menu-block allergen-key-block">
+      <h3 class="menu-heading">Allergen Key</h3>
+      <ul class="allergen-key-list">${rows}</ul>
+      ${disclaimerHTML}
     </div>`;
 }
 
@@ -71,7 +156,23 @@ async function hydrateMenu() {
   if (!el) return;
   try {
     const data = await loadJSON('data/menu.json');
-    el.innerHTML = data.categories.map(categoryHTML).join('');
+    let html = data.categories.map(categoryHTML).join('');
+
+    if (data.sundayOnly) {
+      html += categoryHTML(data.sundayOnly);
+    }
+
+    if (Array.isArray(data.extras) && data.extras.length) {
+      html += `
+        <div class="menu-block">
+          <h3 class="menu-heading">Extras</h3>
+          <div class="menu-grid">${data.extras.map(menuItemHTML).join('')}</div>
+        </div>`;
+    }
+
+    html += allergenKeyHTML(data.allergenKey, data.allergyDisclaimer);
+
+    el.innerHTML = html;
   } catch (e) { console.warn(e); }
 }
 
@@ -85,7 +186,9 @@ async function hydrateCatering() {
       info.innerHTML = data.info.map(i => `<div class="info-item"><h3>${esc(i.title)}</h3><p>${esc(i.text)}</p></div>`).join('');
     }
     if (packages) {
-      packages.innerHTML = data.categories.map(categoryHTML).join('');
+      let html = data.categories.map(categoryHTML).join('');
+      html += allergenKeyHTML(data.allergenKey, data.allergyDisclaimer);
+      packages.innerHTML = html;
     }
     if (note) note.textContent = data.note;
   } catch (e) { console.warn(e); }

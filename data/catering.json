@@ -1,32 +1,238 @@
 {
   "info": [
-    { "title": "Who It's For", "text": "Offices, birthdays, weddings, wakes, engagement parties and any gathering that deserves proper food." },
-    { "title": "Where We Deliver", "text": "Across London, with collection also available from Peckham Palms." },
-    { "title": "Lead Time", "text": "We ask for at least 5 days' notice for platters and 14 days for large events of 50+ guests." },
-    { "title": "Minimum Order", "text": "Platters serve 8–10 people, with a minimum order of 2 platters per booking." }
+    {
+      "title": "About Us",
+      "text": "Two soulful sisters bringing the sweet taste of Nigeria to the streets of London. Established in 2017, The Flygerians mix vibrant and colourful Nigerian street food with a modern British twist."
+    }
   ],
   "categories": [
     {
-      "name": "Small Eats Platter",
+      "name": "Lunchtime Catering",
+      "subtitle": "All meals will be served on sharing platters. Delivery or serving service available. VAT will be applied.",
       "items": [
-        { "name": "Naija Bites Board", "description": "Chicken gizzard, sticky wings, cassava chips and fried plantain, served on a sharing board.", "tag": "Serves 8–10 · From £75" },
-        { "name": "Hot Wings Platter", "description": "A generous tray of our lightly battered hot wings with dipping sauces on the side.", "tag": "Serves 8–10 · From £65" }
+        {
+          "name": "Vegan Jollof and Sweet Chicken",
+          "description": "Served with plantain and hot sauce.",
+          "tag": "",
+          "allergens": []
+        },
+        {
+          "name": "Vegan Jollof and Fish",
+          "description": "Served with plantain and hot sauce.",
+          "tag": "",
+          "allergens": [
+            "F"
+          ]
+        },
+        {
+          "name": "Vegan Jollof and Vegan Efo Riro",
+          "description": "(Spinach stew) served with plantain and hot sauce.",
+          "tag": "",
+          "allergens": [],
+          "note": "V, VG"
+        }
+      ],
+      "addon": "Add a Nigerian Fanta or Chaps (Nigerian welcome drink). Extra £5 pp",
+      "pricingTiers": [
+        {
+          "title": "£13.95 Small Meals",
+          "detail": "(1 protein pp)"
+        },
+        {
+          "title": "£16.95 Medium Meals",
+          "detail": "(2 protein pp)"
+        },
+        {
+          "title": "£18.95 Large Meals",
+          "detail": "(3 protein pp)"
+        }
       ]
     },
     {
-      "name": "Big Eats Platter",
-      "items": [
-        { "name": "Jollof & Chicken Sharing Tray", "description": "Smoky jollof rice, forbidden sauce chicken and fried plantain, ready to serve straight from the tray.", "tag": "Serves 10–12 · From £120" },
-        { "name": "Suya & Rice Feast", "description": "A mix of chicken and beef suya with basmati or jollof rice, spinach stew and plantain.", "tag": "Serves 10–12 · From £140" }
+      "name": "Canapes",
+      "infoPage": {
+        "columns": [
+          {
+            "paragraphs": [
+              "Please inform us if you or anyone has any food allergies and we can adjust the recipe to align/fit your dietary needs.",
+              "All prices will be subject to sustainable cutlery, plates and napkins of £100 - unless you remove this option and provide your own. If you require any chinaware, crockery, chaffing dishes or staff at your event please let us know.",
+              "We are happy to design a bespoke menu for you from the listing at your suggestions. You can choose your items, based on the package option you want to go for.",
+              "For more information do email us on: theflygerians@outlook.com"
+            ]
+          },
+          {
+            "heading": "Profession serving staff",
+            "paragraphs": [
+              "This additional fee is for having professional staff present on the day to serve your food. This is a great feature that means you can focus on enjoying the day and the staff will be on hand to answer any questions and look after your guest. This is a popular choice for many, as we will do the hard work for you portion control and food served with Flygerian love and good vibes. This service will cost £280 and include your chaffing trays."
+            ]
+          },
+          {
+            "heading": "Food warming chaffing trays",
+            "paragraphs": [
+              "This will ensure your chosen food items are at the perfect temperature for your guest to enjoy your food."
+            ]
+          }
+        ]
+      },
+      "listItems": [
+        "Agege bread garlic bites with Naija black eye beans (vg)",
+        "Jollof shots served with plantain (v) (vg)",
+        "Super dupa spicy wings",
+        "Battered Squid",
+        "Mamas forbidden sweet wings / Flygerian Spicy beef suya",
+        "Mini Beef meat pie / Mini Chicken meat pie / Mini Plantain tart (v) (vg)",
+        "Mini Vegan meat pie (v) (vg) / Puff Puff, Mini Nigerian Doughnut balls",
+        "Chicken Gizadodo, chicken stomach served with Plantain",
+        "Moi Moi, bean tray bake available in Plain, with fish, with fish and egg",
+        "Patties available in chicken, fish, beef and vegan",
+        "Salt and pepper, lightly battered Squid",
+        "Salt fish fritters",
+        "Lightly battered prawns",
+        "Nija vegetable spring rolls (v) (vg)",
+        "Sweet and sticky pork ribs / Plantain",
+        "Skinny vegan burgers (v) served in a lettuce cup with tomatoes and sauce"
+      ],
+      "pricingTiers": [
+        {
+          "title": "Bronze £18 (PP)",
+          "detail": "A choice of 3 canapes."
+        },
+        {
+          "title": "Silver £24 (PP)",
+          "detail": "A choice of 4 canapes."
+        },
+        {
+          "title": "Gold £30 (PP)",
+          "detail": "A choice of 5 canapes."
+        }
       ]
     },
     {
-      "name": "Dolci Platter",
-      "items": [
-        { "name": "Chin Chin Pie Bites", "description": "Bite-sized portions of our chin chin, banana and caramel pie, topped with Milo.", "tag": "Serves 10–12 · From £55" },
-        { "name": "Plantain Ice Cream Tubs", "description": "Individual tubs of our homemade vanilla plantain ice cream.", "tag": "10 tubs · From £40" }
+      "name": "Buffet",
+      "infoPage": {
+        "columns": [
+          {
+            "paragraphs": [
+              "Please inform us if you or anyone has any food allergies and we can adjust the recipe to align/fit your dietary needs."
+            ]
+          },
+          {
+            "heading": "Cutlery, plates and napkins",
+            "paragraphs": [
+              "We can provide 100% bio-degradable & sustainable cutlery, plates and napkins, if you required please let us know.",
+              "We are happy to design a bespoke menu for you from the listing at your suggestions. You can choose your items, based on the package option you want to go for.",
+              "For more information do email us on: theflygerians@outlook.com"
+            ]
+          },
+          {
+            "heading": "Profession serving staff",
+            "paragraphs": [
+              "We can provide professional staff on the day to serve your food. This is a great feature that means you can focus on enjoying the day and our staff will be on hand to answer any questions and look after your guests. This is a popular choice for many, as we will do the hard work for you portion control and food served with Flygerian love and good vibes. This service comes with an extra fee that will built into your quote."
+            ]
+          },
+          {
+            "heading": "Food warming chaffing trays",
+            "paragraphs": [
+              "This will ensure your chosen food items are at the perfect temperature for your guest to enjoy your food. Fee per tray applies."
+            ]
+          }
+        ]
+      },
+      "groups": [
+        {
+          "heading": "Starters",
+          "items": [
+            "Mini beef meat pie",
+            "Mini chicken meat pie",
+            "Mini vegan meat pie (v) (vg)",
+            "Supa dupa fly wings, hot wings",
+            "Fly wings, sweet wings (contains gluten)",
+            "Chicken Gizadodo, chicken stomach served with Plantain",
+            "Moi Moi, bean tray bake available in plain, with fish or with fish and egg",
+            "Salt and pepper, lightly battered Squid",
+            "Lightly battered prawns",
+            "Nija vegetable spring rolls (v) (vg)",
+            "Sweet and sticky pork ribs"
+          ]
+        },
+        {
+          "heading": "Mains",
+          "items": [
+            "Fried red brim Fish with Sauteed veg",
+            "Mama's forbidden sauce covered chicken pieces, legs and thighs",
+            "Efro riro, Spinach stew (v) (vg) you can add beef, chicken or assorted meat.",
+            "Jollof rice (v) (vg)",
+            "Fried rice (v) (vg)",
+            "Black eye bean stew with Plantain (v) (vg)",
+            "Chicken Gizadodo, chicken stomach served with Plantain",
+            "Vegan Moi Moi, bean tray bake plain (v) (vg)",
+            "Moi Moi, bean tray bake available plain, with fish, with fish and egg",
+            "Sweet corn",
+            "Salad",
+            "Chicken pieces, leg and thigh",
+            "Beef/Chicken suya",
+            "Beef/Chicken stew",
+            "Assorted meat stew cowfoot, shaki, chicken and beef"
+          ]
+        },
+        {
+          "heading": "Carribbean dishes",
+          "note": "The Flygerians can make it all!",
+          "items": [
+            "Patties: Beef, Cheesy beef, Lamb and Chicken",
+            "Curry goat, Curry chicken",
+            "White rice and peas",
+            "Salt fish fritters",
+            "Rum cake"
+          ]
+        },
+        {
+          "heading": "Desserts",
+          "items": [
+            "Chocolate gateau cake",
+            "Chin'ofee pie, Banoffee pie but with a Nigerian twist. Nigerian chin chin base. Available with strawberry or banana.",
+            "Puff Puff (Nigerian doughnut balls) (v) (vg)",
+            "Fruit platter"
+          ]
+        },
+        {
+          "heading": "Drink options",
+          "items": [
+            "Naija Fanta",
+            "Freshly squeezed juices: Pineapple and Ginger/ Watermelon and Strawberry/Carrot and Ginger",
+            "Supermalt",
+            "Chapman"
+          ]
+        }
+      ],
+      "note": "We are super flexible and happy to build a menu with you if required. We can also swap starters for desserts.",
+      "pricingTiers": [
+        {
+          "title": "Bronze £45 (PP)",
+          "detail": "A choice of 4 mains and 2 starters."
+        },
+        {
+          "title": "Silver £60 (PP)",
+          "detail": "A choice of 5 mains, 2 starters and 1 dessert."
+        },
+        {
+          "title": "Gold £80 (PP)",
+          "detail": "A choice of 6 mains, 3 starters, 2 desserts or 1 dessert and 1 drink per person."
+        }
       ]
     }
   ],
-  "note": "Prices are a guide and vary by guest count and menu selection. Get in touch below for a full quote tailored to your event."
+  "allergenKey": {
+    "G": "Gluten",
+    "D": "Dairy",
+    "E": "Egg",
+    "N": "Nuts",
+    "M": "Molluscs / Shellfish",
+    "CR": "Crustaceans",
+    "F": "Fish",
+    "V": "Vegetarian",
+    "VG": "Vegan"
+  },
+  "allergyDisclaimer": "Please inform us if you or anyone has any food allergies and we can adjust the recipe to align with your dietary needs. Items marked (v) are vegetarian and (vg) are vegan; please contact us to confirm full allergen information for any dish before booking.",
+  "note": "We are happy to design a bespoke menu for you from the listing at your suggestions. You can choose your items, based on the package option you want to go for. If you require any chinaware, crockery, chaffing dishes or staff at your event please let us know. For more information email theflygerians@outlook.com or contact us on Instagram @theflygerian."
 }

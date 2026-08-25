@@ -114,7 +114,7 @@ a { text-decoration: none; color: inherit; }
 .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
 .menu-item { background: var(--white); padding: 24px; border-radius: var(--radius); border: 1px solid #ece9e2; }
 .menu-item h4 { font-size: 1.05rem; margin-bottom: 8px; }
-.menu-item p { color: var(--gray); font-size: 0.95rem; }
+.menu-item p { color: var(--gray); font-size: 0.95rem; white-space: pre-line;}
 .tag { display: inline-block; margin-top: 10px; font-size: 0.8rem; font-weight: 600; color: var(--green-dark); background: #e3f5ea; padding: 4px 10px; border-radius: var(--radius); }
 .menu-note { text-align: center; color: var(--gray); font-size: 0.9rem; margin-top: 24px; }
 
@@ -129,6 +129,143 @@ a { text-decoration: none; color: inherit; }
 .catering-info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; }
 .info-item h3 { color: var(--green); font-size: 1.1rem; margin-bottom: 10px; }
 .info-item p { color: var(--gray); font-size: 0.95rem; }
+.category-subtitle {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.category-addon {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+.pricing-tiers {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.pricing-tier {
+  border-top: 2px solid currentColor;
+  padding-top: 0.75rem;
+  min-width: 180px;
+  text-align: left;
+}
+
+.pricing-tier-price {
+  font-weight: 700;
+}
+
+.pricing-tier-detail {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+.category-subtitle {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.category-addon {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+.category-note {
+  margin-top: 1.5rem;
+}
+
+.pricing-tiers {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.pricing-tier {
+  border-top: 2px solid currentColor;
+  padding-top: 0.75rem;
+  min-width: 180px;
+  text-align: left;
+}
+
+.pricing-tier-title {
+  font-weight: 700;
+}
+
+.pricing-tier-detail {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.info-page {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.info-page-column {
+  flex: 1;
+  min-width: 220px;
+}
+
+.info-page-column h4 {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.info-page-column p {
+  margin-bottom: 1rem;
+}
+
+.plain-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+  max-width: 900px;
+}
+
+.plain-list li {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.menu-groups {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.menu-group {
+  flex: 1;
+  min-width: 220px;
+}
+
+.menu-group h4 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.menu-group .plain-list {
+  text-align: left;
+  margin: 0;
+}
+
+.group-note {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+
 
 /* ===== Visit ===== */
 .visit { padding: 96px 0; }
