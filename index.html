@@ -31,14 +31,36 @@
 </header>
 
 <section class="hero">
-  <div class="container hero-inner" id="heroContent">
-    <p class="eyebrow">Peckham, London &middot; Est. 2016</p>
-    <h1>Chop life before life chops you.</h1>
-    <p class="hero-text">Vibrant Nigerian street food and drinks, cooked with love and served with flair!</p>
-    <div class="hero-actions">
-      <a href="menu.html" class="btn btn-primary">View the Menu</a>
-      <a href="visit.html" class="btn btn-outline">Find Us</a>
-      <a href="https://www.opentable.co.uk/r/the-flygerians-london" class="btn btn-outline">Book a Table</a>
+  <div class="container hero-layout">
+    <div class="hero-inner" id="heroContent">
+      <p class="eyebrow">Peckham, London &middot; Est. 2016</p>
+      <h1>Chop life before life chops you.</h1>
+      <p class="hero-text">Vibrant Nigerian street food and drinks, cooked with love and served with flair!</p>
+      <div class="hero-actions">
+        <a href="menu.html" class="btn btn-primary">View the Menu</a>
+        <a href="visit.html" class="btn btn-outline">Find Us</a>
+        <a href="https://www.opentable.co.uk/r/the-flygerians-london" class="btn btn-outline">Book a Table</a>
+      </div>
+    </div>
+    <div class="hero-slider" data-slider aria-label="The Flygerians highlights">
+      <div class="hero-slides">
+        <div class="hero-slide is-active">
+          <img src="https://placehold.co/900x650/008751/ffffff?text=Nigerian+Street+Food" alt="Placeholder for Nigerian street food" width="900" height="650">
+        </div>
+        <div class="hero-slide">
+          <img src="https://placehold.co/900x650/d9a441/14140f?text=Good+Food%2C+Good+Vibes" alt="Placeholder for food and drinks" width="900" height="650" loading="lazy">
+        </div>
+        <div class="hero-slide">
+          <img src="https://placehold.co/900x650/14140f/ffffff?text=Peckham+Palms" alt="Placeholder for The Flygerians at Peckham Palms" width="900" height="650" loading="lazy">
+        </div>
+      </div>
+      <button class="slider-control slider-prev" type="button" aria-label="Previous slide">&larr;</button>
+      <button class="slider-control slider-next" type="button" aria-label="Next slide">&rarr;</button>
+      <div class="slider-dots" role="tablist" aria-label="Choose a highlight">
+        <button class="slider-dot is-active" type="button" role="tab" aria-label="Show slide 1" aria-selected="true"></button>
+        <button class="slider-dot" type="button" role="tab" aria-label="Show slide 2" aria-selected="false"></button>
+        <button class="slider-dot" type="button" role="tab" aria-label="Show slide 3" aria-selected="false"></button>
+      </div>
     </div>
   </div>
   <div class="hero-flag" aria-hidden="true">
