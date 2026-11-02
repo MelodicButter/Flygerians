@@ -1,3 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1600">
-  <image href="images/assets/Gemini_Generated_Image_34s81g34s81g34s8.jpg" x="-550" y="0" width="2624" height="1632" preserveAspectRatio="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="The Flygerians">
+  <rect width="64" height="64" rx="12" fill="#008751"/>
+  <path d="M18 14h30v8H27v8h18v8H27v12h-9V14z" fill="#fff"/>
+  <circle cx="49" cy="48" r="5" fill="#d9a441"/>
 </svg>

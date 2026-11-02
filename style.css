@@ -98,6 +98,18 @@ a { text-decoration: none; color: inherit; }
 .teaser-card p { color: var(--gray); margin-bottom: 16px; }
 .teaser-link { font-weight: 600; color: var(--green); font-size: 0.9rem; }
 
+/* ===== Catering showcase ===== */
+.catering-showcase { padding: 96px 0; background: var(--white); }
+.catering-showcase-grid { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: 0; align-items: center; }
+.catering-packages { padding: 32px 8px 32px 0; }
+.catering-gallery { min-width: 0; }
+.catering-gallery h2 { font-size: 2.1rem; margin-bottom: 36px; }
+.catering-slider { position: relative; max-width: 860px; height: 480px; margin: 0 auto; overflow: hidden; background: var(--black); border-radius: var(--radius); }
+.catering-slides { position: absolute; inset: 0; }
+.catering-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.35s ease; }
+.catering-slide.is-active { opacity: 1; }
+.catering-slide img { width: 100%; height: 100%; object-fit: cover; }
+
 /* ===== Visit strip (homepage) ===== */
 .visit-strip { background: var(--green); padding: 56px 0; }
 .visit-strip-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
@@ -151,7 +163,7 @@ a { text-decoration: none; color: inherit; }
 .addons li:last-child { border-bottom: none; }
 
 /* ===== Catering info grid ===== */
-.catering-info { padding: 64px 0; border-bottom: 1px solid #ece9e2; }
+.catering-info { padding: 64px 0; }
 .catering-info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; }
 .info-item h3 { color: var(--green); font-size: 1.1rem; margin-bottom: 10px; }
 .info-item p { color: var(--gray); font-size: 0.95rem; }
@@ -305,7 +317,7 @@ a { text-decoration: none; color: inherit; }
 .visit-map iframe { width: 100%; height: 340px; border: 0; border-radius: var(--radius); }
 
 /* ===== Links page ===== */
-.links-page { padding: 96px 0; background: var(--off-white); }
+.links-page { padding: 24px 0 96px; background: var(--off-white); }
 .links-page .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
 .link-card { background: var(--white); border: 1px solid #ece9e2; border-radius: var(--radius); padding: 32px; }
 .link-card-image { display: block; width: auto; max-width: 100%; height: 300px; object-fit: contain; object-position: center; background: var(--off-white); margin: -24px auto 28px; border-radius: var(--radius); }
@@ -316,7 +328,7 @@ a { text-decoration: none; color: inherit; }
 .notify-form input { flex: 1; min-width: 180px; padding: 12px 14px; border: 1px solid #d8d5cc; border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; }
 .notify-form input:focus { outline: none; border-color: var(--green); }
 
-.social-strip { padding: 64px 0 96px; background: var(--off-white); }
+.social-strip { padding: 64px 0 24px; background: var(--off-white); }
 .social-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 .social-row a { padding: 12px 24px; border: 1px solid var(--black); border-radius: var(--radius); font-weight: 600; font-size: 0.9rem; }
 .social-row a:hover { background: var(--black); color: var(--white); }
@@ -333,6 +345,19 @@ a { text-decoration: none; color: inherit; }
 .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--green); }
 .contact-form .btn { margin-top: 16px; align-self: flex-start; }
 .form-note { font-size: 0.75rem; color: var(--gray); margin-top: 12px; }
+.form-status { min-height: 1.5em; margin-top: 12px; font-size: 0.9rem; color: var(--gray); }
+.form-status-success { color: var(--green-dark); }
+.form-status-error { color: #a12622; }
+.contact-form .btn:disabled { cursor: wait; opacity: 0.65; }
+
+/* ===== Privacy policy ===== */
+.policy-page { padding: 72px 0 96px; background: var(--off-white); }
+.policy-content { max-width: 800px; }
+.policy-updated { color: var(--gray); font-size: 0.9rem; margin-bottom: 32px; }
+.policy-content h2 { font-size: 1.45rem; margin: 32px 0 12px; }
+.policy-content h2:first-of-type { margin-top: 0; }
+.policy-content p { color: var(--gray); margin-bottom: 16px; }
+.policy-content a { color: var(--green-dark); text-decoration: underline; }
 
 /* ===== Footer ===== */
 .site-footer { background: var(--black); color: var(--white); padding: 48px 0 32px; }
@@ -357,5 +382,9 @@ a { text-decoration: none; color: inherit; }
   .nav-toggle { display: flex; }
   .slider-control { display: none; }
   .hero, .page-hero { padding: 64px 0 80px; }
+  .catering-showcase { padding: 64px 0; }
+  .catering-showcase-grid { grid-template-columns: 1fr; gap: 32px; }
+  .catering-packages { padding: 0; }
+  .catering-slider { height: 320px; }
   .visit-strip-inner { text-align: center; justify-content: center; flex-direction: column; }
 }

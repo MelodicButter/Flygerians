@@ -49,6 +49,9 @@
       <p>For catering and private events, use our <a href="catering.html">catering page</a> instead so your enquiry reaches the right team.</p>
     </div>
     <form class="contact-form" id="contactForm">
+      <input type="hidden" name="access_key" value="c95099a4-2312-495b-8459-7df5d259415c">
+      <input type="hidden" name="subject" value="New contact enquiry from The Flygerians website">
+      <input type="hidden" name="from_name" value="The Flygerians website">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
 
@@ -59,7 +62,8 @@
       <textarea id="message" name="message" rows="5" required></textarea>
 
       <button type="submit" class="btn btn-primary">Send Message</button>
-      <p class="form-note">This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+      <p class="form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
+      <p class="form-note">Your information is used to respond to your enquiry. See our <a href="privacy.html">Privacy Policy</a>.</p>
     </form>
   </div>
 </section>
@@ -75,6 +79,7 @@
       <a href="visit.html">Visit Us</a>
       <a href="links.html">Links</a>
       <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
     </nav>
     <p class="copyright">&copy; 2026 The Flygerians &mdash; All Rights Reserved.</p>
   </div>

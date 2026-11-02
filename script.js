@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const slider = document.querySelector('[data-slider]');
   if (slider) {
-    const slides = Array.from(slider.querySelectorAll('.hero-slide'));
+    const slides = Array.from(slider.querySelectorAll('.hero-slide, .catering-slide'));
     const dots = Array.from(slider.querySelectorAll('.slider-dot'));
     const previous = slider.querySelector('.slider-prev');
     const next = slider.querySelector('.slider-next');
@@ -66,23 +66,51 @@ document.addEventListener('DOMContentLoaded', () => {
     restartTimer();
   }
 
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert("Thanks for reaching out! We'll get back to you soon.");
-      contactForm.reset();
-    });
-  }
+  const setupWeb3Forms = (formId, statusId, successMessage) => {
+    const form = document.getElementById(formId);
+    const status = document.getElementById(statusId);
+    if (!form || !status) return;
 
-  const cateringForm = document.getElementById('cateringForm');
-  if (cateringForm) {
-    cateringForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert("Thanks for your enquiry! Our catering team will be in touch with a quote.");
-      cateringForm.reset();
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const submitButton = form.querySelector('button[type="submit"]');
+      if (!submitButton) return;
+
+      submitButton.disabled = true;
+      status.className = 'form-status';
+      status.textContent = 'Sending...';
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+          },
+          body: JSON.stringify(Object.fromEntries(new FormData(form)))
+        });
+        const result = await response.json();
+
+        if (!response.ok || !result.success) {
+          throw new Error(result.message || 'The form could not be sent.');
+        }
+
+        form.reset();
+        status.className = 'form-status form-status-success';
+        status.textContent = successMessage;
+      } catch (error) {
+        status.className = 'form-status form-status-error';
+        status.textContent = error instanceof Error
+          ? error.message
+          : 'The form could not be sent. Please email us directly.';
+      } finally {
+        submitButton.disabled = false;
+      }
     });
-  }
+  };
+
+  setupWeb3Forms('contactForm', 'contactFormStatus', "Thanks for reaching out! We'll get back to you soon.");
+  setupWeb3Forms('cateringForm', 'cateringFormStatus', "Thanks for your enquiry! Our catering team will be in touch with a quote.");
 
   document.body.addEventListener('submit', (e) => {
     if (e.target && e.target.id === 'notifyForm') {
